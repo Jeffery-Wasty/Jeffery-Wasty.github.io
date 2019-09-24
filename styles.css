@@ -1,0 +1,29 @@
+.main-list {
+  width: 30%;
+  margin: auto;
+}
+
+h3 {
+  font-family: 'Cambria';
+}
+
+.search-box {
+  border: 0.1px solid lightgray;
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.content {
+  margin-top: 3%;
+  float: right;
+  width: 80%;
+  padding-left: 5%;
+}
+
+img {
+  float: left;
+  width: 20%;
+  border-radius: 15px;
+}
