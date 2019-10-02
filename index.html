@@ -11,88 +11,58 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="search-box">
       <h3>Artist Directory</h3>
-      <input
-        class="form-control my-2 search"
-        type="search"
-        aria-label="Search"
-      />
+      <div class="wrapper">
+        <input class="form-control search" type="search" aria-label="Search" />
+        <button
+          type="button"
+          class="artist-button btn btn-outline-secondary"
+          onclick="showAddArtist()"
+        >
+          Add Artist
+        </button>
+      </div>
     </div>
-    <div class="list-group main-list">
-      <a
-        href="#"
-        class="list-group-item list-group-item-action flex-column align-items-start"
+    <div class="add-artist-box" id="add-artist-box">
+      <form id="artist-form">
+        <input
+          class="form-fields form-control"
+          type="text"
+          id="name-field"
+          maxlength="40"
+          placeholder="Artist name"
+        />
+        <input
+          class="form-fields form-control"
+          type="text"
+          id="about-field"
+          maxlength="40"
+          placeholder="About artist"
+        />
+        <input
+          class="form-fields form-control"
+          id="image-field"
+          type="text"
+          placeholder="Image URL"
+        />
+      </form>
+      <button
+        type="button"
+        class="add-button btn btn-outline-secondary"
+        onclick="addArtist()"
       >
-        <div class="content">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Anne Warren</h5>
-          </div>
-          <p class="mb-1">
-            New York University
-          </p>
-        </div>
-        <img src="https://randomuser.me/api/portraits/med/women/1.jpg" />
-      </a>
-      <a
-        href="#"
-        class="list-group-item list-group-item-action flex-column align-items-start"
-      >
-        <div class="content">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Adrian Woodward</h5>
-          </div>
-          <p class="mb-1">
-            Harvard University
-          </p>
-        </div>
-        <img src="https://randomuser.me/api/portraits/med/men/1.jpg" />
-      </a>
-      <a
-        href="#"
-        class="list-group-item list-group-item-action flex-column align-items-start"
-      >
-        <div class="content">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Isla Mccall</h5>
-          </div>
-          <p class="mb-1">
-            Oxford University
-          </p>
-        </div>
-        <img src="https://randomuser.me/api/portraits/med/women/2.jpg" />
-      </a>
-      <a
-        href="#"
-        class="list-group-item list-group-item-action flex-column align-items-start"
-      >
-        <div class="content">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Scott M'Scott</h5>
-          </div>
-          <p class="mb-1">
-            BCIT
-          </p>
-        </div>
-        <img src="https://randomuser.me/api/portraits/med/men/2.jpg" />
-      </a>
-      <a
-        href="#"
-        class="list-group-item list-group-item-action flex-column align-items-start"
-      >
-        <div class="content">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Cathy Johnson</h5>
-          </div>
-          <p class="mb-1">
-            Cambridge University
-          </p>
-        </div>
-        <img src="https://randomuser.me/api/portraits/med/women/20.jpg" />
-      </a>
+        Add
+      </button>
     </div>
+    <div class="list-group artist-list" id="artist-list"></div>
   </body>
 </html>
